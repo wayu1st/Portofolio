@@ -1,0 +1,197 @@
+:root{
+    --bluebold: #08a6e8;
+    --orangebold: #EE603E;
+    --orangesoft: #ebbb73;
+    --orangelogo: rgb(239, 156, 67);
+    --bluesoft: rgb(110, 177, 244);
+    --cover: #f3f5f8; 
+    --grayfont: #3d535f;
+    --dark: #050921;
+    --dark2: #0f184a;
+    --paragraph: rgb(177, 177, 177);
+    --judul: rgb(204, 204, 204);
+    --transp: rgba(105, 114, 144, 0.311);
+    
+}
+body{
+    background-color: var(--dark);
+}
+.about{
+    background-color: var(--dark2);
+}
+.skills{
+    background: var(--dark);
+}
+.projects{
+    color: var(--cover);
+    background: var(--dark2);
+    min-height: 100vh;
+}
+.projects h2{
+    padding-top: 5%;
+    margin-bottom: 5rem;
+}
+.projectcontainer{
+    margin: 8%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    align-items: center;
+    gap: 2rem;
+    margin-top: 5rem;
+    padding-bottom: 8%;
+}
+.projectbox{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 8%;
+}
+.projectbox img{
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer {
+    width: 100%;
+    height:0%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #050921);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.4s;
+}
+.layer h5{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.layer p{
+    color: var(--judul);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.layer i{
+    color: var(--bluebold);
+    margin-top: 20px;
+    font-size: 20px;
+    background: var(--cover);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.layer i:hover{
+    color: var(--cover);
+    background: var(--bluebold);
+}
+.projectbox:hover img{
+    transform: scale(1.1);
+}
+.projectbox:hover .layer{
+    height: 100%;
+}
+
+
+
+
+.contact{
+    min-height: 100vh;
+    margin: 8%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 15%;
+}
+.contactext .list{
+    align-items: center;
+    justify-content: center;
+}
+.contactform h2{
+    color: var(--cover);
+    margin: 18px 0;
+    font-size: 50px;
+    font-weight: 600;
+}
+.list{
+    margin-bottom: 2.8rem;
+    align-items: center;
+    justify-content: center;
+}
+.list i{
+    color: var(--judul);
+    padding-right: 10px;
+}
+.list li {
+    margin-bottom: 12px;
+    list-style-type: none;
+    display: flex;
+    color: var(--judul);
+    font-size: 14px;
+    transition: all .45s ease;
+    text-decoration: none;
+}
+.list li a :hover{
+    color: var(--bluebold);
+    transform: translateX(5px);
+}
+.img2 img{
+    width: 30vw;
+    border-radius: 50%;
+    border: 2px solid var(--bluebold);
+    transition: .45s ease;
+}
+.img2 img:hover{
+    box-shadow: 0 1px 12px 3px var(--bluebold);
+    transform: scale(1.02);
+}
+.contactform form{
+    margin-right: 5%;
+    position: relative;
+}
+.contactform form input,
+form textarea{
+    width: 100%;
+    padding: 14px;
+    background: rgba(255, 255, 255, .1);
+    color: var(--judul);
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.contactform textarea{
+    resize: none;
+    height: 240px;
+}
+.contactform textarea:hover{
+    background: rgba(255, 255, 255, .2);
+}
+.contactform form input:hover{
+    background: rgba(255, 255, 255, .2);
+}
+.contactform .submit{
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    background: var(--transp);
+    width: 160px;
+    transition: all .45s ease;
+}
+.contactform .submit:hover{
+    background: var(--bluebold);
+    color: var(--cover);
+}
