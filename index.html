@@ -21,22 +21,24 @@
     <div class="awal">
         <nav>
             <h2 class="logo">w<span>ayuu</span></h2>
-            <ul>
-                <li><a class="home" href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
+            <i class="fa-solid fa-bars" id="menu"></i>
+            <ul id="nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="bungkus" style="padding-top: 20%;">
+            <img src="foto/wayuu2.png" id="profile" alt="">
             <div class="konten">
             <h4>High School Student</h4>
             <h1>Hi, I'm <span id="nama"></span> </h1>
-            <h5>I'm a vocational high school student majoring in Computer Science (RPL), 
-                I'm learning practical skills <br> related to programming, software development, and system administration.</h5>
+            <h6>I'm a vocational high school student majoring in Computer Science (RPL), 
+                I'm learning practical skills related to programming, software development, and system administration.</h6>
             <div class="tombol">
-                <button type="button"><a class="more" href="#about">Look More</a></button>
+                <button type="button"><a class="more" href="#about">Read More</a></button>
             </div>
             </div>
         </div>
@@ -77,7 +79,8 @@
                 <i class="fa-solid fa-pen-nib"></i>
                 <h3>Graphic Design</h3>
                 <p>Possesses a fundamental understanding of graphic design principles, including layout, typography, and color theory. 
-                    Capable of using graphic design software such as Adobe Illustrator</p>
+                    Capable of using graphic design software such as Adobe Illustrator
+                </p>
                     <div class="btn">
                         <button>Read More</button>
                     </div>
@@ -111,56 +114,58 @@
         <div class="projectcontainer">
             <div class="projectbox">
                 <img src="project/webspider.png" alt="">
-                <div class="layer">
+                <!-- <div class="layer"> -->
                     <h5>Web Design</h5>
                     <p>Solo Project, Spiderman website design, inspired by the marvel wiki web</p>
+                    <p>Click <a href="https://wayu1st.github.io/MarvelSpiderman/"><u>here</u></a> to see the website</p>
                     <a href="project/webspider.png"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+                <!-- </div> -->
             </div>
 
             <div class="projectbox">
                 <img src="project/webscarlet.png" alt="">
-                <div class="layer">
+                <!-- <div class="layer"> -->
                     <h5>Web Design</h5>
                     <p>Solo project, Scarlet Witch website design, inspired by the marvel wiki web</p>
+                    <p>Click <a href="https://wayu1st.github.io/MarvelScarletWitch/"><u>here</u></a> to see the website</p>
                     <a href="project/webscarlet.png"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+                <!-- </div> -->
             </div>
 
             <div class="projectbox">
                 <img src="project/webglamour.png" alt="">
-                <div class="layer">
+                <!-- <div class="layer"> -->
                     <h5>Web Design</h5>
                     <p>Group project UI/UX design about beauty e-commerce.</p>
                     <a href="project/webglamour.png"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+                <!-- </div> -->
             </div>
 
             <div class="projectbox">
                 <img src="project/webporto.png" alt="">
-                <div class="layer">
+                <!-- <div class="layer"> -->
                     <h5>Web Design</h5>
                     <p>Solo Project to make UI/UX design about myself</p>
                     <a href="project/webporto.png"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+                <!-- </div> -->
             </div>
 
             <div class="projectbox">
                 <img src="project/webtemanpiket.png" alt="">
-                <div class="layer">
+                <!-- <div class="layer"> -->
                     <h5>Web Design</h5>
                     <p>Group project UI/UX design about teacher's absent mobile app base</p>
                     <a href="project/webtemanpiket.png"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+                <!-- </div> -->
             </div>
 
             <div class="projectbox">
                 <img src="project/webfrozenfood.png" alt="">
-                <div class="layer">
+                <!-- <div class="layer"> -->
                     <h5>Web Design</h5>
                     <p>Group Project UI/UX design about frozen food web base bussines</p>
                     <a href="project/webfrozenfood.png"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </section>
@@ -180,10 +185,10 @@
             </div>
             <form action="">
                 <input type="name" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email Address" required>
-                <input type="name" placeholder="Your Mobile Number" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="name" placeholder="Your Number">
                 <textarea name="" id="" cols="35" rows="10" placeholder="How Can I Help You" required></textarea>
-                <input class="submit" type="submit" value="Send Message" class="sumbit" required>
+                <input class="submit" type="submit" value="Send Message" class="sumbit">
             </form>
         </div>
     </section>
@@ -223,5 +228,16 @@
         <!--SCROLL REVEAL JS-->
         <script src="scrollreveal.js"></script>
         <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!-- MENU ICON -->
+         <script type="text/javascript">
+            let menuIcon = document.querySelector('#menu');
+            let navbar = document.querySelector('#nav');
+
+            menuIcon.onclick = () => {
+                menuIcon.classList.toggle('bx-x');
+                navbar.classList.toggle('active');
+            }
+         </script>
 </body>
 </html>
