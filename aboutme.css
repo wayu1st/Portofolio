@@ -24,7 +24,7 @@ html{
 .awal{
     margin-top: -15%;
     background-image: url(foto/wayuu.png);
-    max-width: 100%;
+    width: 100%;
     height: auto;
     background-size: cover;
     background-position: center;
@@ -34,8 +34,8 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 3vw;
-    padding-bottom: 3vw;
+    padding-top: 25px;
+    padding-bottom: 25px;
     padding-left: 8%;
     padding-right: 8%;
     width: 100%;
@@ -44,15 +44,46 @@ nav{
     transition: background-color 0.4s ease-in-out ;
     z-index: 9999;
 }
+#menu{
+    font-size: 30px;
+    color: var(--bluebold);
+    display: none;
+    cursor: pointer;
+}
+@media(width<50em){
+    nav{
+        background-color: #000311;
+    }
+    #menu{
+        display: block;
+    }
+    #nav{
+        width: 50%;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background-color: #000311;
+        border-bottom-left-radius: 20px;
+        padding: 20px 25px;
+        line-height: 2.5;
+        display: none;
+    }
+    #nav li{
+        display: block;
+    }
+    #nav.active{
+        display: block;
+    }
+
+}
 nav.sticky{
-    background-color: #050921;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    box-shadow: 0px 0px 15px #000000;
+    background-color: #000311;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .logo{
     color: rgb(239, 156, 67);
-    font-size: 3vw;
+    font-size: 30px;
     letter-spacing: 1px;
     cursor: pointer;
 }
@@ -64,7 +95,7 @@ nav ul li{
     display: inline-block;
 }
 nav ul li a{
-    font-size: 1vw;
+    font-size: 15px;
     padding: .5vw 2vw;
     border-radius: 5%;
     color: white;
@@ -81,6 +112,7 @@ nav ul li a:hover{
     color:#08a6e8;
     transition: .4s;
     background-color: rgba(0, 0, 0, .5);
+    border-radius: 20px;
 }
 nav ul li a.active{
     color:#08a6e8;
@@ -93,25 +125,33 @@ nav.sticky ul li .active{
     color: white;
     margin-top: 15%;
     margin-left: 8%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.bungkus img{
+    width: 60%;
+    border-radius: 0px;
+    display: none;
 }
 h4{
-    font-size: 2vw;
+    font-size: 25px;
     font-weight: 600;
 }
 h1{
-    font-size: 7vw;
+    font-size: 100px;
 }
-h5{
-    font-size: 1vw;
+h6{
+    font-size: 15px;
     font-weight: 500;
+    padding-right: 40%;
 }
 button{
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 10px;
-    margin-top: 30px;
+    margin: 30px 0 20% 0;
     background:#08a6e8;
     border: 2px solid #08a6e8;
-    font-size: 1.2vw;
+    font-size: 15px;
 }
 button:hover{
     background: transparent;
@@ -119,7 +159,41 @@ button:hover{
 .more{
     text-decoration: none;
     color: white;
-    font-weight: 600;
+    font-weight: 500;
+}
+@media(width<=40em){
+    .konten{
+        padding-top: 10%;
+        text-align: center;
+    }
+    .bungkus{
+        margin: 30% 0% 0 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .bungkus img{
+        display: flex;
+        border-radius: 50%;
+        text-align: center;
+    }
+    .awal{
+        background-image: none;
+        background-color: var(--dark);
+    }
+    h6{
+        display: none;
+    }
+}
+@media(width<=60em){
+    h1{
+        font-size: 40px;
+    }
+    h4{
+        font-size: 25px;
+    }
+    h6{
+        font-size: 15px;
+    }
 }
 .bungkus::before{
     position: absolute;
@@ -159,14 +233,13 @@ button:hover{
 
 
 .about{
-    min-height: 100vh;
     overflow: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, auto));
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background-color:#050921 ;
+    background-color:#0a1134 ;
     filter: blur(100%);
 }
 .about::after{
@@ -193,13 +266,7 @@ button:hover{
     left: 0;
     bottom:0;
     margin:8%;
-    animation: objectfoto 4s linear infinite;
-}
-@keyframes objectfoto {
-    50%{
-        left: 1.5vw;
-        bottom: 1vw;
-    }
+    padding-top: 5%;
 }
 .heading{
     text-align: center;
@@ -214,7 +281,7 @@ button:hover{
     color: var(--cover);
 }
 .aboutconten p{
-    font-size: 1.2vw;
+    font-size: 20px;
     margin: 2vw 0 2vw;
     color: var(--judul);
 }
@@ -225,22 +292,20 @@ button:hover{
     }
     .aboutimg #facecard{
         width: 50%;
-        margin: 8% 0% 0% 25%;
-        border-radius: 20%;
+        margin: 5% 0% 0% 25%;
+        border-radius: 50%;
     }
     .aboutconten{
         margin: 0% 8% 20% 20%;
     }
     .heading{
         font-size: 40px;
-    }
-    .aboutconten p{
-        font-size: 2vw;
+        margin-top: 5%;
     }
 }
 .link p {
     display: inline-block;
-    font-size: 1.2vw;
+    font-size: 15px;
     color: var(--paragraph);
     padding-right: 2vw;
 }
@@ -248,7 +313,7 @@ button:hover{
     color: var(--orangebold);
 }
 .link2 a{
-    font-size: 3vw;
+    font-size: 30px;
     display: inline;
     padding-right: 1vw;
     color: var(--judul);
@@ -287,9 +352,8 @@ button:hover{
 .skillcontainer{
     margin: 8rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     justify-content: center;
-    align-items:center ;
     gap: 2rem;
 }
 .skillcontainer .skillbox{
@@ -340,19 +404,3 @@ button{
     color: var(--judul);
 
 }
-@media (width <=50em){
-    .skillbox{
-        width: 100%;
-    }
-    .skillbox h3{
-        font-size: 3vw;
-    }
-    .skillbox p{
-        font-size: 2vw;
-    }
-    .btn button{
-        font-size: 10px;
-    }
-}
-
-
